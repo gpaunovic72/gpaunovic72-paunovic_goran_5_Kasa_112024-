@@ -1,0 +1,32 @@
+@import "../../style/variables.scss";
+
+.headerContainer {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerLogo {
+  height: 47px;
+}
+
+.styleLink {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  width: 100%;
+  padding-left: 43px;
+
+  .link {
+    text-decoration: none;
+    color: $text-color;
+    font-family: $text-font-family;
+
+    &:hover {
+      text-decoration: underline;
+    }
+    &.active {
+      text-decoration: underline;
+    }
+  }
+}
