@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import AboutPage from "./pages/AboutPage";
 import DescriptionPage from "./pages/DescriptionPage";
@@ -16,6 +17,7 @@ export default function Router() {
         <Route path="/description" element={<DescriptionPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

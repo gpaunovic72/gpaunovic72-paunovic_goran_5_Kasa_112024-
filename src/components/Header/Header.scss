@@ -14,13 +14,16 @@
   display: flex;
   align-items: center;
   gap: 26px;
-  width: 100%;
   padding-left: 43px;
 
   .link {
     text-decoration: none;
     color: $text-color;
-    font-family: $text-font-family;
+    font: {
+      family: $text-font-family;
+      size: $text-font-size;
+    }
+    white-space: nowrap;
 
     &:hover {
       text-decoration: underline;
