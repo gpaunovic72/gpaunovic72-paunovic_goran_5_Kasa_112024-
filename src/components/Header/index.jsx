@@ -4,9 +4,9 @@ import "../Header/Header.scss";
 
 export default function Header() {
   return (
-    <header className="headerContainer">
-      <img src={Logo} alt="logo" className="headerLogo" />
-      <nav className="styleLink">
+    <header className="navBar">
+      <img src={Logo} alt="logo" className="navBar__logo" />
+      <nav className="navBar__link">
         <NavLink
           to="/"
           className={({ isActive }) => (isActive ? "link active" : "link")}

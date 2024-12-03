@@ -1,7 +1,10 @@
+import Banner from "../../components/Banner";
+import BannerImage from "../../assets/banner-homePage.webp";
+
 export default function HomePage() {
   return (
     <div>
-      <h1>Home</h1>
+      <Banner image={BannerImage} title="Chez vous, partout et ailleurs" />
     </div>
   );
 }

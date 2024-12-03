@@ -3,25 +3,25 @@
 .footer {
   width: 100%;
   height: 209px;
-  background-color: $background;
+  background-color: $background-black;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  .FooterLogo {
+  &Logo {
     height: 39px;
   }
 
-  .copyright {
+  &__copyright {
     width: 34.5%;
     height: 46px;
     font-size: $text-font-size;
     display: flex;
     justify-content: center;
 
-    p {
+    &--p {
       width: 70%;
       text-align: center;
     }

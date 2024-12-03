@@ -1,35 +1,32 @@
 @import "../../style/variables.scss";
 
-.headerContainer {
-  margin: 20px;
+.navBar {
+  margin: 20px 20px 27px;
   display: flex;
   justify-content: space-between;
-}
 
-.headerLogo {
-  height: 47px;
-}
+  &__logo {
+    height: 47px;
+  }
 
-.styleLink {
-  display: flex;
-  align-items: center;
-  gap: 26px;
-  padding-left: 43px;
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    padding-left: 43px;
 
-  .link {
-    text-decoration: none;
-    color: $text-color;
-    font: {
-      family: $text-font-family;
-      size: $text-font-size;
-    }
-    white-space: nowrap;
+    .link {
+      text-decoration: none;
+      font-size: $text-font-size;
 
-    &:hover {
-      text-decoration: underline;
-    }
-    &.active {
-      text-decoration: underline;
+      white-space: nowrap;
+
+      &:hover {
+        text-decoration: underline;
+      }
+      &.active {
+        text-decoration: underline;
+      }
     }
   }
 }
