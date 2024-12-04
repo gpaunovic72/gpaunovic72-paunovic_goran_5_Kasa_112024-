@@ -1,0 +1,24 @@
+@import "../../style/variables.scss";
+@import "../../style/mixin.scss";
+
+.card {
+  margin: 0px 20px 22px;
+  cursor: pointer;
+  background-color: $background-color-element;
+  border-radius: 10px;
+  height: 255px;
+  @include position-flex;
+
+  @media (min-width: 768px) {
+    margin: 0;
+    height: 340px;
+  }
+
+  &__title {
+    line-height: $globale-line-height;
+    color: $color-title-location;
+    font-size: 18px;
+    height: 52px;
+    width: 88.5%;
+  }
+}
