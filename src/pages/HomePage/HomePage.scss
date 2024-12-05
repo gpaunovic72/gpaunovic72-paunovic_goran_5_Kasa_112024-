@@ -1,11 +1,14 @@
+@import "../../style/variables.scss";
+
 .card__container {
   @media (min-width: 768px) {
     margin: 0px 100px 50px;
     padding: 56px 50px 43px;
-    background-color: gray;
+    background-color: $background-color-desktop;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 60px;
     row-gap: 50px;
+    border-radius: 25px;
   }
 }

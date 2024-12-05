@@ -9,3 +9,22 @@
   align-items: flex-end;
   justify-content: center;
 }
+
+@mixin linear-gradient {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #0a0a0a 42%,
+    #040404 100%,
+    #000000 100%
+  );
+  z-index: 1;
+  opacity: 50%;
+}

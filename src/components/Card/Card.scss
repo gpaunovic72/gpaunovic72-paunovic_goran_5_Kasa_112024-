@@ -4,10 +4,23 @@
 .card {
   margin: 0px 20px 22px;
   cursor: pointer;
-  background-color: $background-color-element;
-  border-radius: 10px;
   height: 255px;
+  position: relative;
   @include position-flex;
+  transition: transform 200ms;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &::before {
+    @include linear-gradient;
+  }
+
+  &__image {
+    @include position-absolute;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+  }
 
   @media (min-width: 768px) {
     margin: 0;
@@ -20,5 +33,6 @@
     font-size: 18px;
     height: 52px;
     width: 88.5%;
+    z-index: 1;
   }
 }

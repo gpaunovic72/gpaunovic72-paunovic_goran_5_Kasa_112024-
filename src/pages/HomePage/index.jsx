@@ -10,7 +10,11 @@ export default function HomePage() {
       <Banner image={BannerImage} title="Chez vous, partout et ailleurs" />
       <div className="card__container">
         {annoncesList.map((list, index) => (
-          <Card key={`${list.id}-${index}`} title={list.title} />
+          <Card
+            key={`${list.id}-${index}`}
+            pictures={list.cover}
+            title={list.title}
+          />
         ))}
       </div>
     </div>

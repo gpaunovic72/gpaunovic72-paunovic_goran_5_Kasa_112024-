@@ -1,0 +1,16 @@
+@import "../../style/mixin.scss";
+
+.container {
+  margin: 19px 19.5px;
+  height: 111px;
+  position: relative;
+  &__banner,
+  &__overlay {
+    @include position-absolute;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  &__overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
