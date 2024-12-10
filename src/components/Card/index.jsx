@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import "../Card/Card.scss";
 
-export default function Card({ pictures, title }) {
+export default function Card({ title, pictures }) {
   return (
     <div className="card">
       <img
@@ -15,5 +15,6 @@ export default function Card({ pictures, title }) {
 }
 
 Card.propTypes = {
+  pictures: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };

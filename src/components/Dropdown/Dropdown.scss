@@ -1,0 +1,82 @@
+@import "../../style/mixin.scss";
+@import "../../style/variables.scss";
+
+.about__item {
+  @include drop-down-about;
+
+  &--title {
+    display: flex;
+    align-items: center;
+    width: 87%;
+    height: 10px;
+    margin: 10px 0px 10px 10px;
+    @media (min-width: 768px) {
+      font-size: 24px;
+      height: 34px;
+      margin: 10px 0px 8px 15px;
+    }
+  }
+
+  &--button {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    right: 19.5px;
+    border: none;
+    background: none;
+    @media (min-width: 768px) {
+      right: 228.5px;
+      margin-top: 11px;
+    }
+
+    img {
+      margin: 10.29px 12px 12.57px 4px;
+      width: 16px;
+      height: 9px;
+      transform: rotate(180deg);
+      transition: transform 400ms ease-in-out;
+
+      &.rotated {
+        transform: rotate(0deg);
+      }
+
+      @media (min-width: 768px) {
+        width: 24px;
+        height: 14px;
+        margin: 10.29px 4px 8px 4px;
+      }
+    }
+  }
+}
+
+.about__description {
+  background-color: $background-color-desktop;
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 330ms ease-in-out, transform 330ms ease-in-out;
+
+  &.actives {
+    max-height: 151px;
+  }
+
+  &--items {
+    color: $color-black;
+    font-size: 12px;
+    line-height: 142.6%;
+    margin: 13px 20px 19px;
+    transform: translateY(-13px);
+    opacity: 0;
+    transition: transform 330ms ease-in-out, opacity 200ms ease-in-out;
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+
+    &.actives {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

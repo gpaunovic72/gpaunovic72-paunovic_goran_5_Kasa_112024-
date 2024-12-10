@@ -1,16 +1,38 @@
 @import "../../style/mixin.scss";
+@import "../../style/variables.scss";
 
-.container {
-  margin: 19px 19.5px;
-  height: 111px;
-  position: relative;
-  &__banner,
-  &__overlay {
-    @include position-absolute;
-    border-radius: 10px;
-    object-fit: cover;
+.about {
+  display: flex;
+  flex-direction: column;
+  &__banner {
+    margin: 0px 19.5px 19px;
+    position: relative;
+    height: 111px;
+
+    &--image,
+    &--overlay {
+      @include position-absolute;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    @media (min-width: 768px) {
+      margin: 0px 100px 38px;
+      height: 223px;
+    }
   }
   &__overlay {
     background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &__content {
+    margin: 0px 19.5px 19px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (min-width: 768px) {
+      margin: 0px 208.5px 38px;
+      gap: 30px;
+    }
   }
 }
