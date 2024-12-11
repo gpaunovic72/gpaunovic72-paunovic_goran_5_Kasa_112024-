@@ -1,0 +1,42 @@
+@import "../../style/mixin.scss";
+@import "../../style/variables.scss";
+
+.error {
+  display: flex;
+  flex-direction: column;
+  gap: 113px;
+  @media (min-width: 768px) {
+    gap: 139px;
+  }
+
+  &__img {
+    margin: 86px 88.5px 0;
+    @media (min-width: 768px) {
+      margin: 89px 421.5px;
+    }
+  }
+  &__description {
+    margin: 0 57.5px 0;
+    color: $color-description;
+    font-size: 18px;
+    text-align: center;
+    line-height: $globale-line-height;
+    @media (min-width: 768px) {
+      font-size: 36px;
+      margin: 0 284px;
+    }
+  }
+  &__description br {
+    display: none;
+  }
+  &__link {
+    cursor: pointer;
+    margin: 0 77px 113px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 14px;
+    @media (min-width: 768px) {
+      font-size: $font-size-errorPage;
+    }
+  }
+}

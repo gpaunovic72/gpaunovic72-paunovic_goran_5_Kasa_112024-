@@ -1,4 +1,4 @@
-import LogoDark from "../../assets/mobile-logo-dark.webp";
+import LogoDark from "../../assets/logo-dark.webp";
 import "../Footer/Footer.scss";
 
 export default function Footer() {

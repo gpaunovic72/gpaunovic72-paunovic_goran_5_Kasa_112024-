@@ -1,5 +1,5 @@
 import { NavLink } from "react-router";
-import Logo from "../../assets/mobile-logo.webp";
+import Logo from "../../assets/logo.webp";
 import "../Header/Header.scss";
 
 export default function Header() {
