@@ -14,7 +14,7 @@ export default function Router() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/description" element={<DescriptionPage />} />
+        <Route path="/description/:id" element={<DescriptionPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />

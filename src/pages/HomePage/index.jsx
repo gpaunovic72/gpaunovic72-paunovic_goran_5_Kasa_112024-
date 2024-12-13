@@ -12,9 +12,10 @@ export default function HomePage() {
     <div>
       <Banner image={BannerImage} title="Chez vous, partout et ailleurs" />
       <div className="card__container">
-        {apartment?.map((list, index) => (
+        {apartment?.map((list) => (
           <Card
-            key={`${list.id}-${index}`}
+            key={list.id}
+            id={list.id}
             pictures={list.cover}
             title={list.title}
           />

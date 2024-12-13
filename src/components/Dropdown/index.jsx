@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import Vector from "../../assets/Vector.png";
+import Vector from "../../assets/Vector.webp";
 import "../Dropdown/Dropdown.scss";
 
 export default function Dropdown({ title, description }) {
