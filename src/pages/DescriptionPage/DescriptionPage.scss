@@ -1,2 +1,18 @@
-.description {
+.fiche {
+  margin: 27px 20px;
+  @media (min-width: 768px) {
+    margin: 50px 100px;
+  }
+
+  &__dropdown {
+    display: grid;
+    gap: 20px;
+    margin-top: 12.88px;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 76px;
+      margin-top: 24px;
+      overflow: hidden;
+    }
+  }
 }

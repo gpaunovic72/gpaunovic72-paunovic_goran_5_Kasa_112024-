@@ -24,6 +24,7 @@ export default function Carousel({ pictures }) {
         alt={`Photographie ${indexBtn + 1}`}
         className="slider__image"
       />
+      <div className="slider__overlay" />
       {pictures.length > 1 && (
         <div>
           <div className="slider__btn">

@@ -3,18 +3,33 @@
 
 .slider {
   position: relative;
-  margin: 0 20px 15px;
   height: 255px;
   display: flex;
 
   @media (min-width: 768px) {
     height: 415px;
-    margin: 0 100px 24px;
+    margin-bottom: 24px;
+  }
+
+  &__overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    @include position-absolute;
+    border-radius: 10px;
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+      border-radius: 25px;
+    }
   }
   &__image {
     @include position-absolute;
     border-radius: 10px;
     object-fit: cover;
+
+    @media (min-width: 768px) {
+      border-radius: 25px;
+    }
   }
 
   &__btn {

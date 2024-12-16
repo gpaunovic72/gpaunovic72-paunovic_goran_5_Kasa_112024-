@@ -7,10 +7,10 @@ export default function Dropdown({ title, description }) {
   const [active, setActive] = useState(false);
   const toggleDropdown = () => setActive(!active);
   return (
-    <div>
-      <div className="about__item">
-        <h3 className="about__item--title">{title}</h3>
-        <button className="about__item--button" onClick={toggleDropdown}>
+    <div className="dropdown">
+      <div className="dropdown__header">
+        <h3 className="dropdown__title">{title}</h3>
+        <button className="dropdown__button" onClick={toggleDropdown}>
           <img
             src={Vector}
             alt="Icône du bouton"
@@ -18,10 +18,20 @@ export default function Dropdown({ title, description }) {
           />
         </button>
       </div>
-      <div className={`about__description ${active ? "actives" : ""}`}>
-        <p className={`about__description--items ${active ? "actives" : ""}`}>
-          {description}
-        </p>
+      <div className={`dropdown__content ${active ? "actives" : ""}`}>
+        {Array.isArray(description) ? (
+          <ul className="dropdown__list">
+            {description.map((item, index) => (
+              <li key={index} className="dropdown__list--item">
+                {item}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className={`dropdown__text ${active ? "actives" : ""}`}>
+            {description}
+          </p>
+        )}
       </div>
     </div>
   );
@@ -29,5 +39,8 @@ export default function Dropdown({ title, description }) {
 
 Dropdown.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string), // Accepte un tableau de chaînes
+  ]).isRequired,
 };

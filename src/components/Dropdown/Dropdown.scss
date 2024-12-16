@@ -1,10 +1,15 @@
 @import "../../style/mixin.scss";
 @import "../../style/variables.scss";
 
-.about__item {
-  @include drop-down-about;
-
-  &--title {
+.dropdown {
+  &__header {
+    @include drop-down-about;
+    height: 30px;
+    @media (min-width: 768px) {
+      height: 52px;
+    }
+  }
+  &__title {
     display: flex;
     align-items: center;
     width: 87%;
@@ -17,11 +22,9 @@
     }
   }
 
-  &--button {
-    position: absolute;
+  &__button {
     width: 32px;
     height: 32px;
-    padding: 0;
     right: 19.5px;
     border: none;
     background: none;
@@ -31,7 +34,6 @@
     }
 
     img {
-      margin: 10.29px 12px 12.57px 4px;
       width: 16px;
       height: 9px;
       transform: rotate(0deg);
@@ -48,20 +50,34 @@
       }
     }
   }
-}
 
-.about__description {
-  background-color: $background-color-desktop;
-  border-radius: 0 0 5px 5px;
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 330ms ease-in-out, transform 330ms ease-in-out;
+  &__content {
+    background-color: $background-color-desktop;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 330ms ease-in-out, transform 330ms ease-in-out;
 
-  &.actives {
-    max-height: 151px;
+    &.actives {
+      max-height: 151px;
+      @media (min-width: 768px) {
+        max-height: 218px;
+      }
+    }
   }
-
-  &--items {
+  &__list {
+    margin: 13px 20px 19px;
+    padding: 0;
+    &--item {
+      font-size: $text-font-size;
+      list-style: none;
+      line-height: $globale-line-height;
+      @media (min-width: 768px) {
+        font-size: $font-size-detail;
+      }
+    }
+  }
+  &__text {
     color: $color-black;
     font-size: 12px;
     line-height: 142.6%;
