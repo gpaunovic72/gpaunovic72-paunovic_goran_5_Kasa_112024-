@@ -26,7 +26,7 @@
     @include position-absolute;
     border-radius: 10px;
     object-fit: cover;
-
+    transition: transform 400ms ease-out;
     @media (min-width: 768px) {
       border-radius: 25px;
     }
@@ -47,9 +47,14 @@
     }
 
     &--prev,
-    &--next,
-    & img {
+    &--next {
       @include button-style(24px, 24px);
+      @media (min-width: 768px) {
+        @include button-style(120px, 96px);
+      }
+    }
+    & img {
+      @include button-style(20px, 12px);
 
       @media (min-width: 768px) {
         @include button-style(79px, 47px);

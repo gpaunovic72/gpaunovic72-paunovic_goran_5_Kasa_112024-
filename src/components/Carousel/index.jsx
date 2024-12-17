@@ -21,7 +21,7 @@ export default function Carousel({ pictures }) {
     <div className="slider">
       <img
         src={pictures[indexBtn]}
-        alt={`Photographie ${indexBtn + 1}`}
+        alt={`Photographie ${indexBtn}`}
         className="slider__image"
       />
       <div className="slider__overlay" />
