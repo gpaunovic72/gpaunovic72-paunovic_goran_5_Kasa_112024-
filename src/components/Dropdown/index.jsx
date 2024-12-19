@@ -7,18 +7,14 @@ export default function Dropdown({ title, description }) {
   const [active, setActive] = useState(false);
   const toggleDropdown = () => setActive(!active);
   return (
-    <div className="dropdown">
+    <div className={`dropdown ${active ? "active" : ""}`}>
       <div className="dropdown__header">
         <h3 className="dropdown__title">{title}</h3>
         <button className="dropdown__button" onClick={toggleDropdown}>
-          <img
-            src={Vector}
-            alt="Icône du bouton"
-            className={active ? "rotated" : ""}
-          />
+          <img src={Vector} alt="Icône du bouton" />
         </button>
       </div>
-      <div className={`dropdown__content ${active ? "actives" : ""}`}>
+      <div className="dropdown__content">
         {Array.isArray(description) ? (
           <ul className="dropdown__list">
             {description.map((item, index) => (
@@ -28,9 +24,7 @@ export default function Dropdown({ title, description }) {
             ))}
           </ul>
         ) : (
-          <p className={`dropdown__text ${active ? "actives" : ""}`}>
-            {description}
-          </p>
+          <p className="dropdown__text">{description}</p>
         )}
       </div>
     </div>
