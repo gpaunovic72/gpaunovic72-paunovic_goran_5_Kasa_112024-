@@ -9,7 +9,7 @@ export default function HomePage() {
   const apartment = data;
 
   return (
-    <div>
+    <div className="home">
       <Banner image={BannerImage} title="Chez vous, partout et ailleurs" />
       <div className="card__container">
         {apartment?.map((list) => (

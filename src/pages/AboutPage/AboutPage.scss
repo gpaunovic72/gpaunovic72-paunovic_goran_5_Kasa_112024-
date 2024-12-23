@@ -4,22 +4,17 @@
 .about {
   display: flex;
   flex-direction: column;
+  align-items: center;
+
   &__banner {
     margin: 0px 19.5px 19px;
-    position: relative;
     height: 111px;
-
-    &--image,
-    &--overlay {
-      @include position-absolute;
-      border-radius: 10px;
-      object-fit: cover;
-    }
+    width: 100%;
     @media (min-width: 768px) {
       margin: 0px 100px 38px;
       height: 223px;
     }
-    &--overlay {
+    .about__overlay {
       background-color: rgba(0, 0, 0, 0.3);
     }
   }

@@ -4,15 +4,19 @@
 .error {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 113px;
   @media (min-width: 768px) {
+    display: flex;
     gap: 139px;
   }
 
   &__img {
-    margin: 86px 88.5px 0;
+    width: 53%;
+    margin-top: 113px;
     @media (min-width: 768px) {
-      margin: 89px 421.5px;
+      width: 41.5%;
+      margin-top: 139px;
     }
   }
   &__description {
@@ -26,16 +30,20 @@
       margin: 0 284px;
     }
   }
+
   &__description br {
-    display: none;
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
   &__link {
     cursor: pointer;
-    margin: 0 77px 113px;
+    margin-bottom: 113px;
     text-align: center;
     text-decoration: underline;
     font-size: 14px;
     @media (min-width: 768px) {
+      margin-bottom: 139px;
       font-size: $font-size-errorPage;
     }
   }

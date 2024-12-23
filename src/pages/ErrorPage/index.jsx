@@ -11,8 +11,8 @@ export default function ErrorPage() {
         alt="Erreur 404 : Page non trouvée"
       />
       <p className="error__description">
-        Oups! La page
-        <br /> que vous demandez n'existe pas.
+        Oups! La page que <br />
+        vous demandez n'existe pas.
       </p>
       <NavLink to="/" className="error__link">
         Retouner sur la page d'accueil
