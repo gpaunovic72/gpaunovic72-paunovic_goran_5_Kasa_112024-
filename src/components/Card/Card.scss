@@ -2,11 +2,11 @@
 @import "../../style/mixin.scss";
 
 .card {
-  margin: 0px 20px 22px;
   cursor: pointer;
   height: 255px;
   position: relative;
   @include position-flex;
+  margin-top: 20px;
   transition: transform 200ms;
   &:hover {
     transform: scale(1.05);
@@ -32,6 +32,7 @@
     line-height: $globale-line-height;
     color: $color-title-location;
     font-size: 18px;
+    font-weight: $font-weight-bold;
     width: 88.5%;
     z-index: 1;
   }

@@ -1,10 +1,19 @@
 @import "./variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 body {
-  margin: 0;
-  padding: 0;
+  max-width: 1440px;
+  margin: 0 auto;
   font-family: $text-font-family;
   color: $color-black;
+}
+
+.home {
+  margin: 0 20px;
+
+  @media (min-width: 768px) {
+    margin: 0 100px;
+  }
 }
 
 a {

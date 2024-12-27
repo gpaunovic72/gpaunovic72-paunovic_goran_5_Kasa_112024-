@@ -4,6 +4,9 @@
 .detail {
   display: flex;
   flex-direction: column;
+  max-width: 1240px;
+  margin: 0;
+  position: relative;
 
   &__header {
     display: flex;
@@ -18,6 +21,7 @@
     &--title {
       margin: 0;
       line-height: $globale-line-height;
+      font-weight: $font-weight-medium;
       color: $color-description;
       @media (min-width: 768px) {
         font-size: 36px;
@@ -36,6 +40,7 @@
     display: flex;
     gap: 10px;
     height: 18px;
+    white-space: nowrap;
     @media (min-width: 768px) {
       height: 25px;
       max-width: 50%;
@@ -45,7 +50,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 25.07%;
+      overflow: hidden;
+      width: auto;
+      padding: 0 29.93px 0 20.07px;
       height: 18px;
       color: $color-title-location;
       font-size: 10px;
@@ -62,13 +69,14 @@
 
   &__body {
     display: flex;
+    justify-content: space-between;
     gap: 101px;
     @media (min-width: 768px) {
       flex-direction: column-reverse;
       align-items: flex-end;
       gap: 21px;
       position: absolute;
-      right: 100px;
+      right: 0;
     }
   }
   &__rating {
@@ -97,9 +105,6 @@
     gap: 10.5px;
     margin-top: 16.12px;
     width: 40.4%;
-    @media (min-width: 768px) {
-      width: 13.5%;
-    }
 
     &--name {
       font-size: $text-font-size;
@@ -107,9 +112,14 @@
       margin: 0;
       height: 33px;
       line-height: $globale-line-height;
-      text-align: right;
+      text-align: end;
+
       @media (min-width: 768px) {
         font-size: $font-size-detail;
+      }
+
+      span {
+        display: block;
       }
     }
     & img {

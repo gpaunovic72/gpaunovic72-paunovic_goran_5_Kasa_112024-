@@ -5,13 +5,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  margin: 0px 19.5px 19px;
+  @media (min-width: 768px) {
+    margin: 0px 100px 38px;
+  }
   &__banner {
-    margin: 0px 19.5px 19px;
     height: 111px;
     width: 100%;
     @media (min-width: 768px) {
-      margin: 0px 100px 38px;
+      max-width: 1240px;
       height: 223px;
     }
     .about__overlay {
@@ -20,13 +22,13 @@
   }
 
   &__content {
-    margin: 0px 19.5px 19px;
+    margin-top: 19px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 
     @media (min-width: 768px) {
-      margin: 0px 208.5px 38px;
+      margin: 38px 108.5px 0;
       gap: 30px;
     }
   }

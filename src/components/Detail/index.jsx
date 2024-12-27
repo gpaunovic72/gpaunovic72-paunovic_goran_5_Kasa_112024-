@@ -22,7 +22,7 @@ export default function Detail({ title, location, tags, rating, host }) {
       <div className="detail__body">
         <div className="detail__rating">
           {range.map((rangeElement, index) =>
-            rangeElement >= rating ? (
+            rangeElement > rating ? (
               <img key={index} src={StartInactive} alt="icone étoile grise" />
             ) : (
               <img key={index} src={StartActive} alt="icone étoile orange" />
@@ -31,7 +31,8 @@ export default function Detail({ title, location, tags, rating, host }) {
         </div>
         <div className="detail__host">
           <p className="detail__host--name">
-            {host.name.split(" ")[0]} <br /> {host.name.split(" ")[1]}
+            <span className="firstname">{host.name.split(" ")[0]}</span>
+            <span className="lastname">{host.name.split(" ")[1]}</span>
           </p>
           <img
             src={host.picture}

@@ -2,14 +2,14 @@
 @import "../../style/mixin.scss";
 
 .banner {
-  margin: 0px 20px 22px;
+  margin-bottom: 22px;
   height: 111px;
   position: relative;
   display: flex;
   align-items: center;
 
   @media (min-width: 768px) {
-    margin: 0px 100px 43px;
+    margin-bottom: 43px;
     height: 223px;
     justify-content: center;
   }
@@ -25,9 +25,11 @@
     background-color: rgba(0, 0, 0, 0.6);
   }
   &__title {
+    display: flex;
+    align-items: center;
     margin-left: 16px;
     z-index: 1;
-    width: 67%;
+    width: 68%;
     height: 52px;
     color: #ffffff;
     font-size: 24px;

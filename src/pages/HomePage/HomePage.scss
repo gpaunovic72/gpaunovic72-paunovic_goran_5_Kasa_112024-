@@ -2,8 +2,8 @@
 @import "../../style/mixin.scss";
 
 .card__container {
+  margin-bottom: 27px;
   @media (min-width: 768px) {
-    margin: 0px 100px 50px;
     padding: 56px 50px 43px;
     background-color: $background-color-desktop;
     display: grid;
